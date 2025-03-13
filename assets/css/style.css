@@ -186,41 +186,4 @@ body {
   min-height: 100vh;
 }
 
-.homepage-content {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: var(--padding);
-  text-align: center;
-}
-.homepage-content .svg-container {
-  margin-bottom: 40px;
-}
-.homepage-content .svg-container .svg-image {
-  width: 100%;
-  max-width: 1250px;
-  height: auto;
-}
-.homepage-content .theme-description {
-  text-align: left;
-}
-.homepage-content .theme-description h1 {
-  font-size: var(--font-size-lg);
-  color: var(--primary);
-  margin-bottom: 40px;
-}
-.homepage-content .theme-description p {
-  font-size: var(--font-size-md);
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-.homepage-content .theme-description ul {
-  list-style: disc;
-  padding-left: 20px;
-  margin-bottom: 20px;
-}
-.homepage-content .theme-description ul li {
-  font-size: var(--font-size-md);
-  margin-bottom: 10px;
-}
-
 /*# sourceMappingURL=style.css.map */
