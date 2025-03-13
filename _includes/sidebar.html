@@ -1,0 +1,78 @@
+<!-- Sidebar with Nepslibabu label at the top -->
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <p class="sidebar-title">Nepslibabu</p>
+  </div>
+
+  <div class="u-container">
+    <div class="background-svg">
+      <img src="/assets/web/Tflag.svg" alt="Background Flag" />
+    </div>
+
+    <div class="logo-container">
+      <img class="logo-image" src="{{ site.logo | relative_url }}" alt="Logo" />
+    </div>
+
+    <h1 class="logo">{{ site.title }}</h1>
+
+    <p class="site-description">{{ site.description }}</p>
+
+    <!-- Navigation links -->
+    <nav>
+      <ul class="nav-links">
+        <li>
+          <a
+            href="{{ '/' | relative_url }}"
+            class="{% if page.url == '/' or page.url == '' %}active{% endif %}"
+          >
+            <i class="ph-fill ph-house"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="{{ '/blog' | relative_url }}"
+            class="{% if page.url contains '/blog' %}active{% endif %}"
+          >
+            <i class="ph-fill ph-pencil"></i>
+            <span>Blog</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="{{ '/about' | relative_url }}"
+            class="{% if page.url contains '/about' %}active{% endif %}"
+          >
+            <i class="ph-fill ph-info"></i>
+            <span>About</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Social media links -->
+  <div class="social-links">
+    <a
+      href="https://github.com/{{ site.social.github }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-github"></i>
+    </a>
+    <a
+      href="https://facebook.com/{{ site.social.facebook }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a
+      href="https://instagram.com/{{ site.social.instagram }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</aside>
