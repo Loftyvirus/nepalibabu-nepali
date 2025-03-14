@@ -4,35 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <!-- Favicon -->
     <link
       rel="icon"
       type="image/x-icon"
       href="{{ '/assets/initial-web/favicon.ico' | relative_url }}"
     />
-
-    <!-- Custom CSS -->
     <link
       rel="stylesheet"
       href="{{ '/assets/css/style.css' | relative_url }}"
     />
-
-    <!-- Include Font Awesome CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <!-- phosphor-icons -->
     <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-
     <title>{{ page.title }} | {{ site.title }}</title>
   </head>
   <body>
+    <!-- Hamburger Menu (Outside the Sidebar) -->
+    <div id="hamburger-menu" class="hamburger-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Sidebar -->
     {% include sidebar.html %}
 
     <!-- Main Content -->
     <main class="main-content">{{ content }}</main>
+
+    <!-- Scripts -->
     <script src="/assets/script/ham.js"></script>
   </body>
 </html>
