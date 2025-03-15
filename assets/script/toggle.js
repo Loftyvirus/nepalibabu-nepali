@@ -32,3 +32,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+const animatedPath = document.querySelector("#animated-path");
+const updateAnimation = () => {
+  const scrollableHeight = document.body.scrollHeight - window.innerHeight;
+  const scrollProgress = window.scrollY / scrollableHeight;
+  const pathLength = 2027;
+  const newOffset = pathLength - scrollProgress * pathLength;
+  animatedPath.style.strokeDashoffset = Math.max(newOffset, 0);
+};
+window.addEventListener("scroll", updateAnimation);
+window.addEventListener("resize", updateAnimation);
+updateAnimation();
