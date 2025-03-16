@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="gallery-container">
+  <h1>{{ page.title }}</h1>
+  <div class="masonry-grid">
+    {% for image in site.static_files %} {% if image.path contains
+    'assets/gallery' %}
+    <div class="masonry-item">
+      <a
+        href="{{ image.path | relative_url }}"
+        data-fancybox="gallery"
+        data-caption="{{ image.name }}"
+      >
+        <img src="{{ image.path | relative_url }}" alt="{{ image.name }}" />
+      </a>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div>

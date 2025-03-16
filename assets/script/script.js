@@ -26,3 +26,31 @@ fetch("https://api.github.com/repos/Loftyvirus/nepalibabu-nepali/contributors")
       "<p>Failed to load contributors. Please try again later.</p>";
     console.error("Error fetching contributors:", error);
   });
+
+$(document).ready(function () {
+  $('[data-fancybox="gallery"]').fancybox({
+    // Custom options here
+    loop: true,
+    buttons: [
+      "zoom",
+      "share",
+      "slideShow",
+      "fullScreen",
+      "download",
+      "thumbs",
+      "close",
+    ],
+  });
+});
+
+const animatedPath = document.querySelector("#animated-path");
+const updateAnimation = () => {
+  const scrollableHeight = document.body.scrollHeight - window.innerHeight;
+  const scrollProgress = window.scrollY / scrollableHeight;
+  const pathLength = 2027;
+  const newOffset = pathLength - scrollProgress * pathLength;
+  animatedPath.style.strokeDashoffset = Math.max(newOffset, 0);
+};
+window.addEventListener("scroll", updateAnimation);
+window.addEventListener("resize", updateAnimation);
+updateAnimation();
