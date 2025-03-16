@@ -2,20 +2,62 @@
 layout: default
 ---
 
-<div class="gallery-container">
-  <h1>{{ page.title }}</h1>
-  <div class="masonry-grid">
-    {% for image in site.static_files %} {% if image.path contains
-    'assets/gallery' %}
-    <div class="masonry-item">
-      <a
-        href="{{ image.path | relative_url }}"
-        data-fancybox="gallery"
-        data-caption="{{ image.name }}"
-      >
-        <img src="{{ image.path | relative_url }}" alt="{{ image.name }}" />
-      </a>
-    </div>
-    {% endif %} {% endfor %}
+<!-- add going back  -->
+<article class="post-page">
+  <!-- SVG Scroll Animation -->
+  <div class="svg-container">
+    <svg viewBox="0 0 30 2027" width="30" height="100%" aria-hidden="true">
+      <path
+        d="M 1 0V -50 l 28 40 V 1621.6 l -28 40V 2027"
+        fill="none"
+        stroke="rgba(210, 210, 210, 1)"
+        stroke-width="2"
+      ></path>
+      <path
+        id="animated-path"
+        d="M 1 0V -50 l 28 45 V 1621.6 l -28 40V 2027"
+        fill="none"
+        stroke="url(#gradient)"
+        stroke-width="3"
+        stroke-dasharray="2027"
+        stroke-dashoffset="2027"
+        stroke-linecap="round"
+      ></path>
+      <defs>
+        <linearGradient
+          id="gradient"
+          gradientUnits="userSpaceOnUse"
+          x1="0"
+          x2="0"
+          y1="0"
+          y2="2027"
+        >
+          <stop stop-color="#18CCFC" stop-opacity="0"></stop>
+          <stop offset="0.2" stop-color="#18CCFC"></stop>
+          <stop offset="0.4" stop-color="#FF007F"></stop>
+          <stop offset="0.6" stop-color="#FF0000"></stop>
+          <stop offset="0.8" stop-color="#0000FF"></stop>
+          <stop offset="1" stop-color="#AE48FF" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
   </div>
-</div>
+
+  <div class="gallery-container">
+    <h1>{{ page.title }}</h1>
+    <div class="masonry-grid">
+      {% for image in site.static_files %} {% if image.path contains
+      'assets/gallery' %}
+      <div class="masonry-item">
+        <a
+          href="{{ image.path | relative_url }}"
+          data-fancybox="gallery"
+          data-caption="{{ image.name }}"
+        >
+          <img src="{{ image.path | relative_url }}" alt="{{ image.name }}" />
+        </a>
+      </div>
+      {% endif %} {% endfor %}
+    </div>
+  </div>
+</article>
