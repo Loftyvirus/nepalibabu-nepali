@@ -203,7 +203,6 @@ body {
   transform: scale(1.05);
 }
 
-
 /* Post Page Styles */
 .post-page {
   max-width: var(--max-w);
@@ -335,4 +334,109 @@ body {
   color: var(--primary);
   margin: 0;
   word-break: break-word;
+}
+
+// about
+
+.about {
+  padding: 4rem 2rem;
+  max-width: 1260px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+
+  .about-box {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    background: #fff;
+  }
+
+  .about-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: left;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #222;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #0077cc;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #0055aa;
+        text-decoration: underline;
+      }
+    }
+
+    ul,
+    ol {
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    blockquote {
+      border-left: 4px solid #0077cc;
+      padding-left: 1rem;
+      margin: 1.5rem 0;
+      color: #666;
+      font-style: italic;
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 4px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    // MathJax styles
+    .MathJax {
+      font-size: 1.2rem;
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background: #f9f9f9;
+      border-radius: 4px;
+      display: inline-block;
+    }
+  }
 }

@@ -1,6 +1,6 @@
 title: "Safal Lama"
 logo: "/assets/initial-web/android-chrome-512x512.png"
-description: "nepali-babu  jekyll theme"
+description: "Nepali-Babu Jekyll Theme"
 
 baseurl: "/nepalibabu-nepali"
 url: "https://loftyvirus.github.io"
@@ -12,3 +12,25 @@ social:
   instagram: happilli_
 
 permalink: /:title/
+
+# Additional Configurations
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude files/directories from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# SASS Configuration
+sass:
+  style: compressed
+
+# Markdown Processor
+markdown: kramdown
+
+kramdown:
+  math_engine: mathjax

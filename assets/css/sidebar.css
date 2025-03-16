@@ -155,8 +155,8 @@
   transition: all var(--transition) ease;
 }
 .sidebar .social-links a:hover {
-  color: var(--white);
-  background: linear-gradient(135deg, var(--primary), #6c5ce7);
+  color: rgba(0, 0, 0, 0.7);
+  background-color: var(--white);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
