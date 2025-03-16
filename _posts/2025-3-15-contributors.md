@@ -3,6 +3,7 @@ layout: post
 title: "contributors"
 date: 2023-03-15
 image: /assets/web/map.svg
+excerpt: "List of every contributors"
 ---
 
 <div id="contributors-list" class="contributors">

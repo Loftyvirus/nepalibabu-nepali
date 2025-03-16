@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+<!-- add going back  -->
+<article class="post-page">
+  <!-- SVG Scroll Animation -->
+  <div class="svg-container">
+    <svg viewBox="0 0 30 2027" width="30" height="100%" aria-hidden="true">
+      <path
+        d="M 1 0V -50 l 28 40 V 1621.6 l -28 40V 2027"
+        fill="none"
+        stroke="rgba(210, 210, 210, 1)"
+        stroke-width="2"
+      ></path>
+      <path
+        id="animated-path"
+        d="M 1 0V -50 l 28 45 V 1621.6 l -28 40V 2027"
+        fill="none"
+        stroke="url(#gradient)"
+        stroke-width="3"
+        stroke-dasharray="2027"
+        stroke-dashoffset="2027"
+        stroke-linecap="round"
+      ></path>
+      <defs>
+        <linearGradient
+          id="gradient"
+          gradientUnits="userSpaceOnUse"
+          x1="0"
+          x2="0"
+          y1="0"
+          y2="2027"
+        >
+          <stop stop-color="#18CCFC" stop-opacity="0"></stop>
+          <stop offset="0.2" stop-color="#18CCFC"></stop>
+          <stop offset="0.4" stop-color="#FF007F"></stop>
+          <stop offset="0.6" stop-color="#FF0000"></stop>
+          <stop offset="0.8" stop-color="#0000FF"></stop>
+          <stop offset="1" stop-color="#AE48FF" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  <article class="timeline-page">
+    <header class="timeline-header">
+      <h1 class="timeline-title">Timeline</h1>
+      <p class="timeline-description">A chronological view of all posts.</p>
+      <a href="javascript:history.back()" class="go-back-button">
+        <i class="ph-fill ph-arrow-left"></i>
+        Go Back
+      </a>
+    </header>
+
+    <!-- Timeline Content -->
+    <div class="timeline-container">
+      {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date |
+      date: '%Y'" %} {% for year in posts_by_year %}
+      <div class="timeline-year">
+        <h2 class="timeline-year-title">{{ year.name }}</h2>
+        <div class="timeline-posts">
+          {% for post in year.items %}
+          <div class="timeline-post">
+            <div class="timeline-post-date">
+              {{ post.date | date: "%B %-d" }}
+            </div>
+            <div class="timeline-post-content">
+              <h3 class="timeline-post-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </h3>
+              <p class="timeline-post-excerpt">
+                {{ post.excerpt | strip_html | truncatewords: 20 }}
+              </p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </article>
+</article>

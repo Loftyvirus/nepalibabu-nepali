@@ -36,6 +36,15 @@
         </li>
         <li>
           <a
+            href="{{ '/timeline' | relative_url }}"
+            class="{% if page.url contains '/timeline' %}active{% endif %}"
+          >
+            <i class="ph-fill ph-calendar-blank"></i>
+            <span>Timeline</span>
+          </a>
+        </li>
+        <li>
+          <a
             href="{{ '/about' | relative_url }}"
             class="{% if page.url contains '/about' %}active{% endif %}"
           >
