@@ -13,6 +13,7 @@ social:
 
 permalink: /:title/
 
+<<<<<<< HEAD
 # Additional Configurations
 plugins:
   - jekyll-feed
@@ -34,3 +35,8 @@ markdown: kramdown
 
 kramdown:
   math_engine: mathjax
+=======
+# create pagination index-posts
+# add gallary
+# add timeline
+>>>>>>> 23f9cbc7a4e161ccf3467b326da5ebc941b2ff41
