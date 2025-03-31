@@ -26,5 +26,11 @@ exclude:
   - node_modules
   - vendor
 
-
 permalink: /posts/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: categories
+    values:
+      layout: category

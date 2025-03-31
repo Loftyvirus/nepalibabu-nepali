@@ -14,3 +14,7 @@
 - title: Posts
   url: /posts
   icon: fas fa-blog
+
+- title: Cateogories
+  url: /categories
+  icon: fas fa-tags

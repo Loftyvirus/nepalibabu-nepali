@@ -97,7 +97,7 @@
   }
 }
 
-// Post list view 
+// Post list view
 .posts-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -115,7 +115,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100px; 
+    height: 120px;
     overflow: hidden;
 
     &:hover {
@@ -192,6 +192,31 @@
         color: var(--secondary);
       }
     }
+  }
+}
+
+.xpz {
+  display: inline-block;
+  margin-right: 0.2rem;
+  color: var(--text-light);
+  font-weight: normal;
+}
+
+// Category links styling
+.post-categories a {
+  margin-left: 0.1rem;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+  }
+
+  &:first-child {
+    margin-left: 0;
   }
 }
 
@@ -311,7 +336,7 @@
 // Responsive adjustments
 @media (max-width: 768px) {
   .posts-list {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 
   .post {
@@ -331,6 +356,46 @@
       &-content {
         font-size: 1rem;
       }
+    }
+  }
+}
+.jekyll-post-navigation-footer {
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+
+  .jekyll-post-nav-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #0066cc;
+      }
+    }
+
+    .jekyll-prev-post {
+      margin-right: auto;
+      padding-right: 1rem;
+    }
+
+    .jekyll-next-post {
+      margin-left: auto;
+      padding-left: 1rem;
+      text-align: right;
+    }
+
+    // If there's only one link (either previous or next), center it
+    a:only-child {
+      margin: 0 auto;
+      text-align: center;
     }
   }
 }
