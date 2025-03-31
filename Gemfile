@@ -7,3 +7,4 @@ gem "jekyll-feed"
 gem 'kramdown'
 gem 'jekyll-paginate'
 gem 'jekyll-sitemap'
+gem "category_generator", path: "_plugins/category_generator.rb"
