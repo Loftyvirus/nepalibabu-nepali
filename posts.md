@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Blog
+title: Posts
 permalink: /posts/
 ---
 
 <header class="page-header">
   <h1 class="page-title">{{ page.title }}</h1>
-  <p class="page-description">Latest articles and insights from our blog</p>
+  <!-- <p class="page-description">Latest articles and insights from our blog</p> -->
 </header>
 
 <div class="posts-list">
@@ -16,7 +16,6 @@ permalink: /posts/
       <a href="{{ post.url | relative_url }}" class="post-link" aria-label="Read more about {{ post.title }}"></a>
       
       <h3 class="post-title">{{ post.title }}</h3>
-      
       <footer class="post-footer">
         <div class="meta-bottom">
           <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>

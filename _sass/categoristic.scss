@@ -1,0 +1,83 @@
+// Categories List
+.cat {
+    &-container {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+  
+    &-title {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+  
+    &-list {
+      padding-left: 1.5rem;
+    }
+  
+    &-item {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+  
+    &-link {
+      color: var(--text);
+      text-decoration: none;
+      
+      &:hover {
+        color: var(--secondary);
+      }
+    }
+  
+    &-count {
+      color: var(--text-light);
+      font-size: 0.9em;
+    }
+  }
+  
+  // Posts List
+  .cat-posts {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  
+    &-title {
+      color: var(--primary);
+      margin: 1rem 0 1.5rem;
+      font-size: 1.5rem;
+    }
+  }
+  
+  .post {
+    &-list {
+      padding-left: 1.5rem;
+      list-style: disc;
+    }
+  
+    &-item {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+  
+    &-link {
+      color: var(--text);
+      text-decoration: none;
+      
+      &:hover {
+        color: var(--secondary);
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .cat-back {
+    color: var(--secondary);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 1rem;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }

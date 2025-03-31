@@ -1,0 +1,68 @@
+.cat-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.cat-title {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+.cat-list {
+  padding-left: 1.5rem;
+}
+.cat-item {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+.cat-link {
+  color: var(--text);
+  text-decoration: none;
+}
+.cat-link:hover {
+  color: var(--secondary);
+}
+.cat-count {
+  color: var(--text-light);
+  font-size: 0.9em;
+}
+
+.cat-posts {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.cat-posts-title {
+  color: var(--primary);
+  margin: 1rem 0 1.5rem;
+  font-size: 1.5rem;
+}
+
+.post-list {
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+.post-item {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+.post-link {
+  color: var(--text);
+  text-decoration: none;
+}
+.post-link:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+.cat-back {
+  color: var(--secondary);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.cat-back:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=categoristic.css.map */
