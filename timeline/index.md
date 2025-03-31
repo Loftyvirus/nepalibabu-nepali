@@ -4,4 +4,4 @@ title: Timeline
 permalink: /timeline/
 ---
 
-This page displays all posts in chronological order.
+Browse through my posts in chronological order. This timeline showcases my journey and the evolution of my work over time.

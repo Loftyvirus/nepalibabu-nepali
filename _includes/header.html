@@ -1,0 +1,39 @@
+{% comment %} _includes/header.html - Site header component {% endcomment %}
+
+<header class="site-header">
+  <!-- Top Bar - Right Aligned -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-content">
+        <span class="theme-credit">
+          {{ site.theme_credit | default: "Powered by nepaliBabu Jekyll theme"
+          }}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation - Full Width -->
+  <div class="main-nav-wrapper">
+    <div class="container">
+      <div class="main-nav">
+        <nav class="nav">
+          <ul>
+            {% assign navigation_links = site.data.navigation %} {% for link in
+            navigation_links %}
+            <li>
+              <a
+                href="{{ link.url | relative_url }}"
+                class="nav-link {% if page.url == link.url or page.url contains link.url and link.url != '/' %}active{% endif %}"
+              >
+                <i class="{{ link.icon }}"></i>
+                <span>{{ link.title }}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

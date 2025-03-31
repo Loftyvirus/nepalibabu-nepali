@@ -1,58 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% seo %}
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="{{ '/assets/initial-web/favicon.ico' | relative_url }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ '/assets/css/style.css' | relative_url }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ '/assets/css/rightbar.css' | relative_url }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ '/assets/css/sidebar.css' | relative_url }}"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <!-- Fancybox CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
-    />
-
-    <!-- jQuery (required for Fancybox) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <!-- Fancybox JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-    <title>{{ page.title }} | {{ site.title }}</title>
-  </head>
+  {% include head.html %}
   <body>
-    <div id="hamburger-menu" class="hamburger-menu">
-      <i class="fas fa-bars"></i>
-    </div>
-    {% include sidebar.html %}
+    {% include header.html %}
     <main class="main-content">
-      <!-- Content from other layouts will be injected here -->
-      {{ content }}
+      <div class="profile-grid">
+        <div class="profile-column">
+          <div class="profile-card">
+            <div class="avatar-container">
+              <img
+                src="{{ site.logo | relative_url }}"
+                alt="{{ site.actual_name }}"
+                class="profile-avatar"
+              />
+            </div>
+
+            <div class="profile-text-container">
+              <h1>{{ site.actual_name }}</h1>
+              <p class="username">@{{ site.username }} · {{ site.pronouns }}</p>
+              <p class="bio">{{ site.description }}</p>
+            </div>
+
+            <div class="social-links">
+              {% for link in site.social_links %} {% assign url_parts = link.url
+              | remove: "https://" | remove: "http://" | remove: "www." | split:
+              "/" %} {% assign site_name = url_parts[0] | split: "." | first %}
+              {% assign username = url_parts[1] | default: "" %}
+
+              <a href="{{ link.url }}" target="_blank" class="social-icon">
+                <i class="fab fa-{{ site_name }}"></i>
+                <span>
+                  {{ site_name | capitalize }}{% if username != "" %}/{{
+                  username }}{% endif %}
+                </span>
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="content-column">
+          <div class="content-container">{{ content }}</div>
+        </div>
+      </div>
     </main>
-    {% include rightbar.html %}
-    <script src="{{ '/assets/script/ham.js' | relative_url }}"></script>
-    <script src="{{ '/assets/script/toggle.js' | relative_url }}"></script>
-    <script src="{{ '/assets/script/script.js' | relative_url }}"></script>
-    <script src="{{ '/assets/script/preventer.js' | relative_url }}"></script>
+    {% include footer.html %}
   </body>
 </html>

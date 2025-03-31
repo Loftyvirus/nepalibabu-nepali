@@ -1,6 +1,7 @@
 ---
 layout: gallery
 title: Gallery
+permalink: /gallery/
 ---
 
-This is the gallery page.
+<!-- dont do naything here -->
