@@ -2,15 +2,15 @@ title: "Safal Lama"
 logo: "assets/initial-web/android-chrome-512x512.png"
 description: "Nepali-Babu Jekyll Theme"
 username: "loftyvirus"
-actual_name: "Safal Lama"
-pronouns: "he/him"
+actual_name: "nepalibabu-jekyll"
+pronouns: "this/it"
 baseurl: "/nepalibabu-nepali"
 url: "https://loftyvirus.github.io"
 
 # Social Media
 social_links:
   - platform: github
-    username: yourusername
+    username: loftyvirus
     label: GitHub
     url: https://github.com/loftyvirus
 
@@ -26,10 +26,5 @@ exclude:
   - node_modules
   - vendor
 
-defaults:
-  - scope:
-      path: ""
-    values:
-      image_path: /assets/gallery/
 
 permalink: /posts/:title/

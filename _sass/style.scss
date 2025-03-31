@@ -46,7 +46,7 @@ html {
 body {
   font-family: $font;
   color: var(--text);
-  background: var(--bg);
+  background: white;
   line-height: 1.5;
 }
 
@@ -185,7 +185,7 @@ a {
   align-self: start;
 
   .profile-card {
-    background: var(--card-bg);
+    // background: var(--card-bg);
     // border-radius: $radius;
     padding: 1.2rem;
     // box-shadow: var(--shadow);
@@ -341,3 +341,18 @@ hr {
     }
   }
 }
+
+// Feed link specific styles
+.social-links {
+  .feed-link {
+    i.fas.fa-rss {
+      color: #000000; 
+    }
+    
+    &:hover {
+      i.fas.fa-rss {
+        color: #111111;
+      }
+    }
+  }
+  }
