@@ -1,4 +1,3 @@
-# [Documentation](https://loftyvirus.github.io/nepalibabu-jekyll-theme/)
 <table>
   <tr>
     <td><img src="assets/initial-web/android-chrome-512x512.png" alt="Nepalibabu-Nepal"></td>

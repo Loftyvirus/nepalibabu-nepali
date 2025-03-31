@@ -1,0 +1,20 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}" />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/gallery.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/timeline.css' | relative_url }}" />
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="icon" href="{{ site.logo | relative_url }}" />
+  <link rel="stylesheet" />
+  {% feed_meta %} {% seo %}
+</head>

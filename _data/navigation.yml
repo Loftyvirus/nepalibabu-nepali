@@ -1,0 +1,16 @@
+# _data/navigation.yml
+- title: Overview
+  url: /
+  icon: fas fa-home
+
+- title: Timeline
+  url: /timeline
+  icon: fas fa-code-branch
+
+- title: Gallery
+  url: /gallery
+  icon: fas fa-images
+
+- title: Posts
+  url: /posts
+  icon: fas fa-blog

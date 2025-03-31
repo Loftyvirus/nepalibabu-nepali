@@ -1,36 +1,35 @@
 title: "Safal Lama"
-logo: "/assets/initial-web/android-chrome-512x512.png"
+logo: "assets/initial-web/android-chrome-512x512.png"
 description: "Nepali-Babu Jekyll Theme"
-
+username: "loftyvirus"
+actual_name: "Safal Lama"
+pronouns: "he/him"
 baseurl: "/nepalibabu-nepali"
 url: "https://loftyvirus.github.io"
 
-# Social Media Usernames
-social:
-  github: loftyvirus
-  facebook: safal.lama.726
-  instagram: happilli_
+# Social Media
+social_links:
+  - platform: github
+    username: yourusername
+    label: GitHub
+    url: https://github.com/loftyvirus
 
-permalink: /:title/
-
-# Additional Configurations
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Exclude files/directories from processing
+# Exclusions
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
   - vendor
 
-# SASS Configuration
-sass:
-  style: compressed
+defaults:
+  - scope:
+      path: ""
+    values:
+      image_path: /assets/gallery/
 
-# Markdown Processor
-markdown: kramdown
-
-kramdown:
-  math_engine: mathjax
+permalink: /posts/:title/

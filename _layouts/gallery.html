@@ -1,63 +1,75 @@
 ---
 layout: default
+title: Gallery
 ---
 
-<!-- add going back  -->
-<article class="post-page">
-  <!-- SVG Scroll Animation -->
-  <div class="svg-container">
-    <svg viewBox="0 0 30 2027" width="30" height="100%" aria-hidden="true">
-      <path
-        d="M 1 0V -50 l 28 40 V 1621.6 l -28 40V 2027"
-        fill="none"
-        stroke="rgba(210, 210, 210, 1)"
-        stroke-width="2"
-      ></path>
-      <path
-        id="animated-path"
-        d="M 1 0V -50 l 28 45 V 1621.6 l -28 40V 2027"
-        fill="none"
-        stroke="url(#gradient)"
-        stroke-width="3"
-        stroke-dasharray="2027"
-        stroke-dashoffset="2027"
-        stroke-linecap="round"
-      ></path>
-      <defs>
-        <linearGradient
-          id="gradient"
-          gradientUnits="userSpaceOnUse"
-          x1="0"
-          x2="0"
-          y1="0"
-          y2="2027"
-        >
-          <stop stop-color="#18CCFC" stop-opacity="0"></stop>
-          <stop offset="0.2" stop-color="#18CCFC"></stop>
-          <stop offset="0.4" stop-color="#FF007F"></stop>
-          <stop offset="0.6" stop-color="#FF0000"></stop>
-          <stop offset="0.8" stop-color="#0000FF"></stop>
-          <stop offset="1" stop-color="#AE48FF" stop-opacity="0"></stop>
-        </linearGradient>
-      </defs>
-    </svg>
+<!-- Include lightgallery CSS and JS in head -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-zoom.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-thumbnail.min.css"
+/>
+
+<div class="gallery-container">
+  <div class="gallery-header">
+    <h2>Gallery</h2>
+    <p>A collection of my work and interests</p>
   </div>
 
-  <div class="gallery-container">
-    <h1>{{ page.title }}</h1>
-    <div class="masonry-grid">
-      {% for image in site.static_files %} {% if image.path contains
-      'assets/gallery' %}
-      <div class="masonry-item">
-        <a
-          href="{{ image.path | relative_url }}"
-          data-fancybox="gallery"
-          data-caption="{{ image.name }}"
-        >
-          <img src="{{ image.path | relative_url }}" alt="{{ image.name }}" />
-        </a>
-      </div>
-      {% endif %} {% endfor %}
+  <div class="gallery-masonry" id="lightgallery">
+    {% for gallery in site.data.gallery %} {% assign gallery_path = gallery.path
+    %} {% assign image_files = site.static_files | where_exp: "file", "file.path
+    contains gallery_path" %} {% for file in image_files %} {% if file.extname
+    == '.jpg' or file.extname == '.jpeg' or file.extname == '.png' or
+    file.extname == '.gif' %}
+    <div
+      class="gallery-item"
+      data-src="{{ file.path | relative_url }}"
+      data-sub-html="<h4>{{ file.name | split: '.' | first | replace: '-', ' ' | replace: '_', ' ' | capitalize }}</h4>"
+    >
+      <a href="javascript:void(0);" class="gallery-link">
+        <img
+          src="{{ file.path | relative_url }}"
+          alt="{{ file.name }}"
+          class="gallery-image"
+        />
+        <div class="gallery-overlay">
+          <h3>
+            {{ file.name | split: '.' | first | replace: '-', ' ' | replace:
+            '_', ' ' | capitalize }}
+          </h3>
+        </div>
+      </a>
     </div>
+    {% endif %} {% endfor %} {% endfor %}
   </div>
-</article>
+</div>
+
+<!-- Include lightgallery JS at the end of the body -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    lightGallery(document.getElementById("lightgallery"), {
+      selector: ".gallery-item",
+      plugins: [lgZoom, lgThumbnail],
+      speed: 500,
+      download: false,
+      counter: true,
+      mousewheel: true,
+      closable: true,
+      loop: true,
+      escKey: true,
+      keyPress: true,
+    });
+  });
+</script>
