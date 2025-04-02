@@ -399,3 +399,33 @@
     }
   }
 }
+.pinned-post {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background-color: var(--bg);
+  border-radius: 6px;
+  border:  solid var(--border) 1px;
+  // border-left: 3px solid #4a89dc;
+
+  h3 {
+    margin: 0 0 4px 0;
+    font-size: 14px;
+    color: #666;
+    font-weight: 600;
+  }
+
+  a {
+    display: block;
+    color: #2c6ecb;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 2px 0;
+    line-height: 1.3;
+
+    &:hover {
+      color: #1a4b8c;
+      text-decoration: underline;
+    }
+  }
+}

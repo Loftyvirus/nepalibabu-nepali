@@ -45,6 +45,15 @@
                 <span>RSS Feed</span>
               </a>
             </div>
+            <!-- pinned post -->
+            {% if site.pinned_post %}
+            <div class="pinned-post">
+              <h3 class="fa fa-thumb-tack" aria-hidden="true"></h3> Pinned Post</h3>
+              <a href="{{ site.baseurl }}{{ site.pinned_post.url }}"
+                >{{ site.pinned_post.title }}</a
+              >
+            </div>
+            {% endif %}
           </div>
         </div>
 
