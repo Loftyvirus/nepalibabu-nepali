@@ -1,0 +1,29 @@
+{
+  "name": "Jekyll Dev Container",
+  "dockerFile": "Dockerfile",
+  "context": "..",
+  "forwardPorts": [6969],
+  "postCreateCommand": "bundle install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "editorconfig.editorconfig",
+        "github.vscode-github-actions",
+        "redhat.vscode-yaml",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "github.vscode-pull-request-github",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "jekyll.serve.auto": true,
+        "jekyll.serve.port": 6969,
+        "jekyll.serve.livereload": true
+      }
+    }
+  },
+  "remoteUser": "root",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace"
+}
