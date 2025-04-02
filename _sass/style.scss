@@ -117,7 +117,7 @@ a {
     position: relative;
 
     i {
-      font-size: 0.5rem;
+      font-size: 0.9rem;
       color: var(--text-light);
     }
 
@@ -340,4 +340,14 @@ hr {
       }
     }
   }
+}
+
+// mapping
+.page-url {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  // border-bottom: 1px solid #eee;
 }

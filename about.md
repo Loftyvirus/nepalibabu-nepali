@@ -1,13 +1,15 @@
 ---
 layout: default
+permalink: /
 ---
 
-## Hi, I'm [Safal Lama](https://safallama.com.np), aka [Happilli](https://github.com/happilli) aka [Ryuzinoh](https://www.youtube.com/watch?v=dz1MhkbPthI)
+## Hi, This is nepalibabu-jekyll theme! 
 <hr>
-![image](https://github-streaks-mqc9.onrender.com/streak/ryuzinoh/image?lang=ne)
+![image](https://github-streaks-mqc9.onrender.com/streak/happilli/image)
 <hr>
 
-## Connect with Me
+## Connect with the root developer
+
 <p style="font-size: 20px;">
   <a href="https://github.com/happilli"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/github.svg" alt="GitHub" width="35" height="35" /></a>
   <a href="https://www.linkedin.com/in/safal-lama-379738330/"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/linkedin.svg" alt="LinkedIn" width="35" height="35" /></a>
