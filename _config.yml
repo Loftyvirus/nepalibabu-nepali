@@ -29,13 +29,6 @@ exclude:
 
 permalink: /posts/:title/
 
-defaults:
-  - scope:
-      path: ""
-      type: categories
-    values:
-      layout: category
-
 pinned_post:
   title: "Our Amazing Contributors"
-  url: "/contributors" #or use permalink in specific file and copy and paste the perma link here, or anylyze the base url and post it here, or external link can be good too
+  url: "/posts/contributors/" #or use permalink in specific file and copy and paste the perma link here, or anylyze the base url and post it here, or external link can be good too
