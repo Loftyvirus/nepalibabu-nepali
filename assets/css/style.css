@@ -78,6 +78,16 @@ a:hover {
   padding: 0 0.8rem;
 }
 
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
 .nav ul {
   display: flex;
   gap: 0.8rem;
@@ -121,6 +131,30 @@ a:hover {
 }
 .nav-link.active::after {
   background: var(--secondary);
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.search-box input {
+  padding: 0.5rem 1rem 0.5rem 2rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  outline: none;
+  transition: all 0.25s ease;
+  width: 180px;
+}
+.search-box input:focus {
+  width: 220px;
+  border-color: var(--primary);
+}
+.search-box .fa-search {
+  position: absolute;
+  left: 10px;
+  color: var(--text-light);
+  font-size: 0.9rem;
 }
 
 .profile-grid {
