@@ -99,7 +99,16 @@ a {
   }
 }
 
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .nav {
+  display: flex;
+  align-items: center;
+
   ul {
     display: flex;
     gap: $gap;
@@ -149,6 +158,33 @@ a {
         background: var(--secondary);
       }
     }
+  }
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  input {
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    outline: none;
+    transition: all $transition;
+    width: 180px;
+
+    &:focus {
+      width: 220px;
+      border-color: var(--primary);
+    }
+  }
+
+  .fa-search {
+    position: absolute;
+    left: 10px;
+    color: var(--text-light);
+    font-size: 0.9rem;
   }
 }
 
